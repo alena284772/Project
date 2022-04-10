@@ -9,7 +9,7 @@ public class Converter {
 
     Boolean isworking = true;
     private Scanner fromclient = new Scanner(System.in);
-    private Integer_checker integer_checkers = new Integer_checker();
+    private Integer_checker integer_checker = new Integer_checker();
     private Binary_checker binary_checker=new Binary_checker();
     private From_10_to_16 from_10_to_16=new From_10_to_16();
     private From_10_to_2 from_10_to_2=new From_10_to_2();
@@ -48,13 +48,13 @@ public class Converter {
                             isworking = false;
                             break;
                         case ("1"):
-                            if (integer_checkers.Number_check(input_ar[1])) {
+                            if (integer_checker.Number_check(input_ar[1])) {
                                 String answer1 = from_10_to_16.convert(Integer.valueOf(input_ar[1]));
                                 System.out.println("Число в 16-ричной системе счисления: " + answer1);
                             }
                             break;
                         case ("2"):
-                            if (integer_checkers.Number_check(input_ar[1])) {
+                            if (integer_checker.Number_check(input_ar[1])) {
                                 String answer2 = from_10_to_2.convert(Integer.valueOf(input_ar[1]));
                                 System.out.println("Число в 2-ой системе счисления: " + answer2);
                             }
